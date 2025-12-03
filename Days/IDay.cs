@@ -1,7 +1,22 @@
 namespace AdventOfCode.Days;
 
-public interface IDay
+public abstract class IDay
 {
-    string Part1(string input);
-    string Part2(string input);
+    public abstract string InputFile { get; }
+
+    public abstract string Part1(string input);
+    public abstract string Part2(string input);
+
+    protected string[] GetInputFile()
+    {
+        if (string.IsNullOrWhiteSpace(InputFile))
+            throw new InvalidOperationException("InputFile must be provided by the implementing class.");
+
+        var path = Path.Combine("Inputs", InputFile);
+
+        if (!File.Exists(path))
+            throw new FileNotFoundException($"Input file not found: {path}", path);
+
+        return File.ReadAllLines(path);
+    }
 }
