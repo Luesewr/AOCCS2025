@@ -1,0 +1,42 @@
+using AdventOfCode.Days;
+
+if (args.Length == 0)
+{
+    Console.WriteLine("Usage: dotnet run <day>");
+    Console.WriteLine("Example: dotnet run 1");
+    return;
+}
+
+if (!int.TryParse(args[0], out int dayNumber) || dayNumber < 1 || dayNumber > 25)
+{
+    Console.WriteLine("Please provide a valid day number (1-25)");
+    return;
+}
+
+IDay? day = dayNumber switch
+{
+    1 => new Day01(),
+    2 => new Day02(),
+    3 => new Day03(),
+    _ => null
+};
+
+if (day == null)
+{
+    Console.WriteLine($"Day {dayNumber:D2} is not implemented yet.");
+    return;
+}
+
+string inputPath = Path.Combine(AppContext.BaseDirectory, "Inputs", $"Day{dayNumber:D2}.txt");
+
+if (!File.Exists(inputPath))
+{
+    Console.WriteLine($"Input file not found: {inputPath}");
+    return;
+}
+
+string input = File.ReadAllText(inputPath);
+
+Console.WriteLine($"--- Day {dayNumber:D2} ---");
+Console.WriteLine($"Part 1: {day.Part1(input)}");
+Console.WriteLine($"Part 2: {day.Part2(input)}");
