@@ -6,7 +6,7 @@ public class Day03 : IDay
 {
     public override string InputFile => "Day03.txt";
 
-    public override string Part1(string input)
+    public override string Part1()
     {
         string[] banks = GetInputFile();
 
@@ -44,7 +44,7 @@ public class Day03 : IDay
         return total.ToString();
     }
 
-    public override string Part2(string input)
+    public override string Part2()
     {
         string[] banks = GetInputFile();
 

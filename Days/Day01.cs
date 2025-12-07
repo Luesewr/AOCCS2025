@@ -4,7 +4,7 @@ public class Day01 : IDay
 {
     public override string InputFile => "Day01.txt";
 
-    public override string Part1(string input)
+    public override string Part1()
     {
         var lines = GetInputFile();
 
@@ -30,7 +30,7 @@ public class Day01 : IDay
         return dialCount.ToString();
     }
 
-    public override string Part2(string input)
+    public override string Part2()
     {
         var lines = GetInputFile();
 

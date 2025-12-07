@@ -28,16 +28,7 @@ if (day == null)
     return;
 }
 
-string inputPath = Path.Combine(AppContext.BaseDirectory, "Inputs", $"Day{dayNumber:D2}.txt");
-
-if (!File.Exists(inputPath))
-{
-    Console.WriteLine($"Input file not found: {inputPath}");
-    return;
-}
-
-string input = File.ReadAllText(inputPath);
 
 Console.WriteLine($"--- Day {dayNumber:D2} ---");
-Console.WriteLine($"Part 1: {day.Part1(input)}");
-Console.WriteLine($"Part 2: {day.Part2(input)}");
+Console.WriteLine($"Part 1: {day.Part1()}");
+Console.WriteLine($"Part 2: {day.Part2()}");

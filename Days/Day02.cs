@@ -4,7 +4,7 @@ public class Day02 : IDay
 {
     public override string InputFile => "Day02.txt";
 
-    public override string Part1(string input)
+    public override string Part1()
     {
         var lines = GetInputFile();
         var line = lines[0];
@@ -38,7 +38,7 @@ public class Day02 : IDay
         return total.ToString();
     }
 
-    public override string Part2(string input)
+    public override string Part2()
     {
         var lines = GetInputFile();
         var line = lines[0];

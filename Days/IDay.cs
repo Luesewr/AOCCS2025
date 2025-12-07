@@ -4,8 +4,8 @@ public abstract class IDay
 {
     public abstract string InputFile { get; }
 
-    public abstract string Part1(string input);
-    public abstract string Part2(string input);
+    public abstract string Part1();
+    public abstract string Part2();
 
     protected string[] GetInputFile()
     {

@@ -4,7 +4,7 @@
     {
         public override string InputFile => "Day04.txt";
 
-        public override string Part1(string input)
+        public override string Part1()
         {
             string[] rows = GetInputFile();
             int[,] counts = new int[rows.Length, rows[0].Length];
@@ -48,7 +48,7 @@
 
             return total.ToString();
         }
-        public override string Part2(string input)
+        public override string Part2()
         {
             string[] rows = GetInputFile();
             int totalRemoved = 0;
