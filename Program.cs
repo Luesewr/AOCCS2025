@@ -23,6 +23,7 @@ IDay? day = dayNumber switch
     6 => new Day06(),
     7 => new Day07(),
     8 => new Day08(),
+    9 => new Day09(),
     _ => null
 };
 
