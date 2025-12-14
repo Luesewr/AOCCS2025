@@ -1,5 +1,3 @@
-﻿using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Complex;
 using System.Text.RegularExpressions;
 
 namespace AdventOfCode.Days
