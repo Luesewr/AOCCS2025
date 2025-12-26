@@ -25,6 +25,7 @@ IDay? day = dayNumber switch
     8 => new Day08(),
     9 => new Day09(),
     10 => new Day10(),
+    11 => new Day11(),
     _ => null
 };
 
